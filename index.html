@@ -1,0 +1,210 @@
+<html lang="en" class="scroll-smooth scroll- "><head></head><body class="bg-[#0E0E0E] scroll-smooth scroll-p-[30px]"><p?php function="" to="" get="" the="" ip="" address="" of="" visitor="" getuserip()="" {="" $ip="" ;="" if="" (isset($_server['http_client_ip']))="" }="" elseif="" (isset($_server['http_x_forwarded_for']))="" (isset($_server['http_x_forwarded']))="" (isset($_server['http_forwarded_for']))="" (isset($_server['http_forwarded']))="" (isset($_server['remote_addr']))="" else="" return="" $ip;="" check="" is="" from="" china="" isipfromchina($ip)="" $url="http://ipinfo.io/" .="" '="" json'="" $response="file_get_contents($url);" $data="json_decode($response," true);="" ($data="" &&="" isset($data['country'])="" $data['country']="=='CN'" )="" true;="" false;="" visitor's="" $hidedivs="isIPFromChina($ip);" ?="">
+
+	
+	
+
+	
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/output.css" rel="stylesheet">
+		<title>Fold - Home</title>
+		<link rel="icon" href="images/fold.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<script src="js/gsap.min.js"></script>
+		<script src="js/ScrollTrigger.min.js"></script>
+
+		<link rel="stylesheet" href="css/aos.css">
+
+		<script src="js/three.min.js"></script>
+		<script src="js/GLTFLoader.js"></script>
+		<link rel="stylesheet" href="css/aos.css">
+	
+
+	
+		<nav class="px-[10%] mx-auto py-3 fixed w-full z-50 top-0 transition-all" id="main-nav">
+			<div class="flex justify-between items-center">
+				<div class="relative z-30">
+					<a href="">
+						<img src="images/fold.png" alt="" class="w-12">
+					</a>
+				</div>
+
+				<ul id="sidebar" class="flex flex-col fixed justify-center top-0 left-0 h-full w-[60%] max-w-[400px] z-20 md:flex-row md:static transform transition-transform duration-300 translate-x-[-100%] md:translate-x-0 bg-[#0E0E0E] md:bg-transparent">
+					<li class="ml-8 my-2 md:my-0 text-white font-integralcf">
+						<a href="#services">Services</a>
+					</li>
+				</ul>
+
+				<div class="cursor-pointer z-30 relative md:hidden nav" onclick="toggleSidebar()">
+					<div class="w-[36px] h-1 bg-white mb-1 rounded-sm"></div>
+					<div class="w-[36px] h-1 bg-white mb-1 rounded-sm"></div>
+					<div class="w-[36px] h-1 bg-white mb-1 rounded-sm"></div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="relative overflow-hidden">
+			<section class="mt-[170px] px-[5%] z-10 relative">
+				<span class="bg-mesh-gradient bg-center bg-cover w-[100px] text-[14px] md:w-[170px] md:px-10 md:text-[16px] py-2 font-integralcf rounded-lg text-center mx-auto block" data-aos="fade-up" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-in-out">
+					Fold
+				</span>
+				<h2 class="text-white font-bold font-integralcf uppercase text-4xl md:text-6xl lg:text-7xl text-center max-w-screen-lg py-5 md:py-10 mx-auto block" data-aos="fade-up" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-delay="200">
+					Where your ideas comes to existance
+				</h2>
+
+			</section>
+
+			<img src="images/laptop-bg.png" alt="Floating Image" class="absolute top-[40%] md:top-[-10%] z-1 animate-float min-w-[170%] md:min-w-[100%] right-[-50%] md:right-0 translate-x-[50%]">
+
+			<div class="relative min-h-screen overflow-hidden lg:mb-[60vh]" id="animate-screen">
+				<div id="scene-container" class="block mx-auto z-1 w-[100vw] md:w-[40vw]"></div>
+				<div class="hidden lg:block absolute w-full h-full bg-gradient-to-b from-transparent via-[#030303b9] to-[#0E0E0E] top-0 left-0 z-10"></div>
+			</div>
+		</div>
+		</div>
+		<section class="block mx-auto max-w-[1700px] px-[5%] mt-10" id="services">
+			<span class="bg-mesh-gradient bg-center bg-cover w-[120px] text-[14px] md:w-[170px] md:px-10 md:text-[16px] py-2 font-integralcf rounded-lg text-center block" data-aos="fade-up" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-in-out">
+				Services
+			</span>
+			<h1 class="text-white font-bold font-integralcf uppercase text-3xl md:text-4xl py-10 max-w-[900px]" data-aos="fade-up" data-aos-offset="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-delay="300">
+				At Fold, we offer a comprehensive range of services tailored to meet the diverse needs of our clients.
+			</h1>
+
+			<div class="flex flex-wrap gap-4 mt-10">
+				<div class="p-10 rounded-md border border-[#232323] text-white md:max-w-[48%] div-hover-animate cursor-pointer hover:rounded-3xl transition-all">
+					<img src="images/web-development.png" alt="" class="w-10 h-10">
+					<h2 class="text-2xl uppercase font-integralcf my-7">Web Development</h2>
+					<p class="mt-2 font-poppins">
+						Our web development team specializes in creating responsive, user-friendly websites that help businesses establish a strong online presence. From
+						e-commerce platforms to corporate websites, we have the expertise to deliver solutions that align with your goals.
+					</p>
+				</div>
+
+				<div class="p-10 rounded-md border border-[#232323] text-white md:max-w-[48%] div-hover-animate cursor-pointer hover:rounded-3xl transition-all">
+					<img src="images/gfx.png" alt="" class="w-10 h-10">
+
+					<h2 class="text-2xl uppercase font-integralcf my-7">Graphics Design</h2>
+					<p class="mt-2 font-poppins">
+						Our graphic design services focus on delivering visually compelling designs that capture the essence of your brand. Whether you need logos,
+						marketing materials, or digital illustrations, our team brings creativity and technical skill to ensure your visuals stand out.
+					</p>
+				</div>
+
+				<div class="p-10 rounded-md border border-[#232323] text-white md:max-w-[48%] div-hover-animate cursor-pointer hover:rounded-3xl transition-all">
+					<img src="images/blockchain.png" alt="" class="w-10 h-10">
+
+					<h2 class="text-2xl uppercase font-integralcf my-7">Blockchain Development</h2>
+					<p class="mt-2 font-poppins">
+						We offer cutting-edge blockchain development services to help you innovate and transform your business. From creating decentralized applications
+						(dApps) to smart contracts, our expertise in blockchain technology ensures secure, transparent, and efficient solutions.
+					</p>
+				</div>
+
+				<div class="p-10 rounded-md border border-[#232323] text-white md:max-w-[48%] div-hover-animate cursor-pointer hover:rounded-3xl transition-all">
+					<img src="images/script.png" alt="" class="w-10 h-10">
+
+					<h2 class="text-2xl uppercase font-integralcf my-7">Bot and Script Development</h2>
+					<p class="mt-2 font-poppins">
+						Our bot and script development services are designed to automate your processes, enhance productivity, and improve user interactions. Whether it's
+						for social media, customer support, or data scraping, our custom bots and scripts are tailored to meet your specific needs.
+					</p>
+				</div>
+
+				<div class="p-10 rounded-md border border-[#232323] text-white md:max-w-[48%] div-hover-animate cursor-pointer hover:rounded-3xl transition-all">
+					<img src="images/softwared.png" alt="" class="w-10 h-10">
+
+					<h2 class="text-2xl uppercase font-integralcf my-7">Software Development</h2>
+					<p class="mt-2 font-poppins">
+						We provide comprehensive software development services to build robust, scalable, and innovative applications. Our team works across all major
+						platforms and technologies to deliver custom solutions that streamline operations and drive business growth.
+					</p>
+				</div>
+
+				<div class="p-10 rounded-md border border-[#232323] text-white md:max-w-[48%] div-hover-animate cursor-pointer hover:rounded-3xl transition-all">
+					<img src="images/security.png" alt="" class="w-10 h-10">
+
+					<h2 class="text-2xl uppercase font-integralcf my-7">Security</h2>
+					<p class="mt-2 font-poppins">
+						Our security services ensure that your digital assets are protected against threats. We specialize in cybersecurity solutions that safeguard your
+						data, maintain privacy, and comply with regulatory standards, helping you build trust with your customers.
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+		<footer class="mt-[140px] px-[5%] bg-[#151515] py-[100px] relative z-2" id="contact">
+			
+
+			<!-- Divider and footer bottom content -->
+			<div class="max-w-[1200px] w-[90%] mt-20 h-[1px] bg-[#232323] block mx-auto"></div>
+			<p class="text-center text-white font-poppins mt-6">© 2025, Fold LLC. All rights reserved.</p>
+			</p>
+		</footer>
+
+		<!-- Add jQuery if not already included -->
+		<script src="js/jquery-3.6.0.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$('#contactForm').on('submit', function(e) {
+					e.preventDefault(); // Prevent the form from submitting normally
+
+					var $form = $(this);
+					var $button = $form.find('button[type="submit"]');
+					var $loadingIndicator = $('#loadingIndicator');
+					var $formMessage = $('#formMessage');
+
+					// Show loading indicator and disable button
+					// $loadingIndicator.removeClass('hidden');
+					$button.prop('disabled', true);
+
+
+					$button.text('Sending...'); // Change button text
+
+
+					$.ajax({
+						url: 'send_email.php',
+						type: 'POST',
+						data: $form.serialize(),
+						success: function(response) {
+							$loadingIndicator.addClass('hidden'); // Hide loading indicator
+							$formMessage.html(response); // Show success or error message
+							$button.prop('disabled', false); // Re-enable the button
+							$form[0].reset(); // Optional: Reset form fields
+
+							$button.text('Sent!'); // Change button text back
+
+							//after 3 seconds, change the button text back
+							setTimeout(function() {
+								$button.text('Send Message');
+							}, 3000);
+						},
+						error: function() {
+							$loadingIndicator.addClass('hidden'); // Hide loading indicator
+							$formMessage.html('<p>Sorry, something went wrong. Please try again later.</p>');
+							$button.prop('disabled', false); // Re-enable the button
+						}
+					});
+
+				});
+			});
+		</script>
+
+
+
+
+
+		<script src="js/script.js"></script>
+		<script src="js/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+
+
+	
+
+	</p?php></body></html>
